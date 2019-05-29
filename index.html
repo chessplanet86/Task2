@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Задание 2</title>
+    <!-- Подключение Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Подключаем скрипт с логикой -->
+    <script async src="task_2.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="app">
+        <div style="margin: 20px">
+            <form action="">
+                <div>
+                    <label><b>Исходное положение:</b>
+                        <div>
+                            <input maxlength="2" v-model="loc" title="Введите координаты в формате A1"
+                                pattern="[A-H][1-8]">
+                        </div>
+
+                    </label>
+
+                </div>
+                <p><button @click.prevent="coordinates">Вычислить возможные координаты</button></p>
+                <p>Вывод: {{conclusion}}</p>
+            </form>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
