@@ -13,20 +13,21 @@
 <body>
     <div id="app">
         <div style="margin: 20px">
-            <form action="">
-                <div>
-                    <label><b>Исходное положение:</b>
-                        <div>
-                            <input maxlength="2" v-model="loc" title="Введите координаты в формате A1"
-                                pattern="[A-H][1-8]">
-                        </div>
 
-                    </label>
+            <div>
+                <label><b>Исходное положение:</b>
+                    <div>
+                        <input maxlength="2" v-model="loc">
+                    </div>
+                    <template v-if='error'>
+                        <pre style="color: red">{{notification}}</pre>
+                    </template>
+                </label>
 
-                </div>
-                <p><button @click.prevent="coordinates">Вычислить возможные координаты</button></p>
-                <p>Вывод: {{conclusion}}</p>
-            </form>
+            </div>
+            <p><button @click="coordinates">Вычислить возможные координаты</button></p>
+            <p>Вывод: {{conclusion}}</p>
+
         </div>
 
 
